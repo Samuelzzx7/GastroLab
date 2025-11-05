@@ -12,9 +12,10 @@ Atualizado em DD/MM/AAAA
 
 | Tarefa      | Responsável |
 | ----------- | ----------- |
-| 1. Criar cadastro dos digimon, com nome,tipo, tamanho, peso, evolução anterios, estagio da evoluçao, cor, proxima evolução   |      |
-| 2. Função para exibir os digimons cadastrados  |   |
-| 3. Função  para editar um digimon| | 
-| 4. Função  para excluir| | 
-| 5. Função para buscar os digimons com diferentes parametros| | 
-
+| 1. Landing page   |      |
+| 2. Cadastro de receita  |   |
+| 3. Banco de dados login| | 
+| 4. Css padrão| | 
+| 5. Sistema de pesquisa | | 
+| 6. Pagina de receitas | | 
+| 7. Fazer flexbox | | 
