@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'AndyBold';
+    src: url(../Andy-Bold/ANDYB.TTF);
+}
+@font-face {
+    font-family: 'Momo_Signature';
+    src: url(../Story_Script/StoryScript-Regular.ttf);
+}
+p {
+    font-size: 20px;
+    font-family: 'AndyBold';
+}
+h1 {
+    font-size: 50px;
+    text-align: center;
+}
+h2 {
+    font-size: 30px;
+}
+.titulo {
+    font-family: 'Momo_Signature';
+}
+body {
+    background-color: rgb(255, 247, 247);
+}
