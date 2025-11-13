@@ -6,20 +6,189 @@
     font-family: 'Momo_Signature';
     src: url(../Story_Script/StoryScript-Regular.ttf);
 }
-p {
-    font-size: 20px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(196, 231, 180);
+    color: #333;
+    font-family: 'AndyBold', sans-serif;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #6cff47;
+    color: rgb(232, 248, 206);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 2em;
+}
+
+.titulo {
+    font-family: 'AndyBold';
+    font-size: 2.3em;
+    letter-spacing: 1px;
+}
+
+.hero {
+    background: url("https://source.unsplash.com/1600x600/?food,table") center/cover no-repeat;
+    color: rgb(206, 236, 171);
+    text-align: center;
+    padding: 130px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.45);
+    padding: 50px;
+    border-radius: 15px;
+    max-width: 700px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
     font-family: 'AndyBold';
 }
-h1 {
-    font-size: 50px;
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+button {
+    background-color: #63b620;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #7db94c;
+    transform: scale(1.05);
+}
+
+.receitas {
+    padding: 70px 20px;
     text-align: center;
+    background-color: #ecf8dd;
 }
-h2 {
-    font-size: 30px;
-}
-.titulo {
+
+.receitas h2 {
+    font-size: 35px;
+    color: #66bd20;
+    margin-bottom: 40px;
     font-family: 'Momo_Signature';
 }
-body {
-    background-color: rgb(255, 247, 247);
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: left;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 15px;
+    font-size: 1.3em;
+    color: #51b424;
+}
+
+.card p {
+    margin: 0 15px 20px;
+    color: #444;
+}
+
+footer {
+    background-color: #68b43b;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+.card h4 {
+    margin: 15px;
+    font-size: 1.3em;
+    color: #51b424;
+}
+
+.card p {
+    margin: 0 15px 20px;
+    color: #444;
+}
+
+footer {
+    background-color: #68b43b;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero-content {
+        padding: 30px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
 }
