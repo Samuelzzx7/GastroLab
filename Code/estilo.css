@@ -91,6 +91,7 @@ button:hover {
     padding: 70px 20px;
     text-align: center;
     background-color: #ecf8dd;
+    cursor: pointer;
 }
 
 .receitas h2 {
