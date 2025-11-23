@@ -7,7 +7,6 @@ body {
     margin-top: 10px;
 }
 
-/* --- BARRA LATERAL --- */
 .sidebar {
     position: fixed;
     left: 0;
@@ -50,14 +49,13 @@ body {
     border-left: 3px solid transparent;
 }
 
-/* HOVER */
 .sidebar ul li a:hover {
     background-color: rgb(196, 231, 180);
     border-left: 3px solid black;
 }
 
 .sidebar ul li.sair {
-    margin-top: auto;  /* empurra para o final da coluna */
+    margin-top: auto;
 }
 
 .conteudo {
