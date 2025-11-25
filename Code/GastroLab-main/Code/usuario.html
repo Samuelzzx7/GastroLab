@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GastroLab</title>
+    <link rel="shortcut icon" href="img/d5c9b2799bc40ee853b60b140d4c38e5.jpg">
+    <link rel="stylesheet" href="usuario.css"> 
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo">GastroLab</h1>
+        <nav>
+            <a href="pInicial.html" id="link-home">Início</a>
+            <a href="pInicial.html" id="link-receitas">Receitas</a>
+            <a href="#" id="link-contato">Contato</a>
+        </nav>
+        <nav class="top-menu">
+            <a href="usuario.html" id="link-contato">Perfil</a>
+        </nav>  
+    </header> 
+    <nav class="sidebar">
+            <h2>Menu</h2>
+    <ul>
+        <li><a href="#" onclick="carregarConteudo('perfil')">Perfil</a></li>
+        <li><a href="#" onclick="carregarConteudo('favoritas')">Favoritas</a></li>
+        <li><a href="#" onclick="carregarConteudo('ingredientes')">Seus Ingredientes</a></li>
+        <li class="sair"><a href="#" onclick="carregarConteudo('sair')">Sair</a></li>
+    </ul>  
+    </nav>
+    <main class="conteudo">
+    </main>
+    <script src="usuarios.js"> </script>    
+</body>
+</html>
