@@ -1,0 +1,40 @@
+@font-face { 
+    font-family: 'AndyBold';
+    src: url(../Andy-Bold/ANDYB.TTF);
+}
+@font-face {
+    font-family: 'Momo_Signature';
+    src: url(../Story_Script/StoryScript-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#cabecalho {
+    margin: 0;
+    background-color: #639955fb;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+#cabecalho nav a {
+    color: #2b2b2b;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: 0.3s;
+}
+
+#cabecalho nav a:hover {
+    color: #fff;
+}
