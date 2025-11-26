@@ -15,20 +15,19 @@
         <h1 class="logo">GastroLab</h1>
 
         <nav>
-             <a href="pInicial.html">
-            <button id="btn-receitas">Inicio</button>
-          </a>
-
-             <a href="receitas.html">
-            <button id="btn-receitas">Receitas</button>
-            <a href="index.html">
-            <button id="btn-receitas">Contato</button>
-          </a>
-          <a href="usuario.html">
-            <button id="btn-receitas">Perfil</button>
-          </a>
+            <a href="#" id="link-home">Início</a>
+            <a href="#secao-receitas" id="link-receitas">Receitas</a>
+            <a href="#" id="link-contato">Contato</a>
         </nav>
     </header>
+    
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="Pesquisar receitas...">
+    <button onclick="buscarReceita()">
+        🔍
+    </button>
+</div>
+
  <section class="receitas" id="secao-receitas">
         <h2>Receitas: </h2>
 
