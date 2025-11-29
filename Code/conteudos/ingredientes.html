@@ -5,10 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+            <style>
+        
+    </style>
+</head>
+
 <body>
     <main class="conteudo">
         <h2>Seus Ingredientes</h2>
-        <p>Gerencie os ingredientes que você tem em casa. Adicione, remova ou atualize sua lista para facilitar o planejamento das suas receitas.</p>
+        <p>Gerencie os ingredientes que você tem em casa.
+           Adicione, remova ou atualize sua lista para facilitar o planejamento das suas receitas.</p>
+    <div class="container">
+        <h2>Ingredientes</h2>
+
+        <div class="input-area">
+            <input id="tarefaInput" type="text" placeholder="Adicionar novo ingrediente...">
+            <button onclick="addTarefa()">Adicionar</button>
+        </div>
+
+        <ul id="listaTarefas">
+            <li>Banana <span class="remove" onclick="remover(this)">✖</span></li>
+        </ul>
+    </div>
+    </script>
     </main>
 </body>
 </html>
