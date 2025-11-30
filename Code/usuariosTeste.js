@@ -43,6 +43,7 @@ $("#btnLogin").on("click", function () {
 
     if (usuarios[user] && usuarios[user] === pass) {
         localStorage.setItem("logado", user);
+        localStorage.setItem("usuarioLogado", user);
         mostrarConteudo();
     } 
 

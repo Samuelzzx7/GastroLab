@@ -8,24 +8,15 @@
      <link rel="stylesheet" href="headerReceitas.css">
 </head>
 <body>
-     <div id="cabecalho">
+    <div class="cabecalho">
         <h1 class="logo">GastroLab</h1>
-
         <nav>
-             <a href="pInicial.html">
-            <button id="btn-receitas">Inicio</button>
-          </a>
-
-             <a href="receitas.html">
-            <button id="btn-receitas">Receitas</button>
-            <a href="index.html">
-            <button id="btn-receitas">Contato</button>
-          </a>
-          <a href="usuario.html">
-            <button id="btn-receitas">Perfil</button>
-          </a>
+            <a href="pInicial.html"><button id="btn-receitas">Início</button></a>
+            <a href="receitas.html"><button id="btn-receitas">Receitas</button></a>
+            <a href="index.html"><button id="btn-receitas">Contato</button></a>
+            <a href="usuario.html"><button id="btn-receitas">Perfil</button></a>
         </nav>
-</div>
+    </div>
 
     <header>
         <h1>Brownie de Chocolate</h1>
@@ -43,7 +34,7 @@
             <li>3 xicara de achocolatado</li>
             <li>12 colheres de farinha de trigo</li>
             <li>3 ovos</li>
-            <li>6 colheres de açúca</li>
+            <li>6 colheres de açúcar</li>
             <li>Baunilha a gosto</li>
         </ul>
 
@@ -56,11 +47,12 @@
             <li>Unte uma forma com manteiga e achocolatado</li>
             <li>Leve ao forno a 180° C por 30 minutos</li>
         </ol>
+        <button onclick="favoritar(1)">⭐ Favoritar</button>
     </section>
 
     <footer>
         <p>Feito com carinho pra você</p>
     </footer>
-
+    <script src="favoritos.js"></script>
 </body>
 </html>

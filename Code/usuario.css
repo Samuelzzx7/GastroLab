@@ -119,3 +119,17 @@ button:hover {
     background-color: #66d069;
     transform: scale(1.05);
 }
+
+#btnCarregar {
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+
+.card p{
+    text-align: left;
+}
+
+a{
+    text-decoration: none;
+}
