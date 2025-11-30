@@ -13,10 +13,9 @@
     box-sizing: border-box;
 }
 
-#cabecalho {
-    margin: 0;
-    background-color: #639955fb;
-    color: #fff;
+.cabecalho {
+    background-color: #4CAF50;
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,17 +23,38 @@
     box-shadow: 0 3px 8px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 50;
+    margin-bottom: 2%;
 }
 
-#cabecalho nav a {
-    color: #2b2b2b;
+.cabecalho .logo {
+    font-size: 2rem;
+}
+
+.cabecalho nav a {
+    color: white;
     margin-left: 20px;
     text-decoration: none;
     font-size: 1.1em;
     transition: 0.3s;
 }
 
-#cabecalho nav a:hover {
-    color: #fff;
+.cabecalho nav a:hover {
+    color: #ccefc6;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #66d069;
+    transform: scale(1.05);
 }

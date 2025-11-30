@@ -2,29 +2,21 @@
     font-family: 'AndyBold';
     src: url(../Andy-Bold/ANDYB.TTF);
 }
+
 @font-face {
     font-family: 'Momo_Signature';
     src: url(../Story_Script/StoryScript-Regular.ttf);
 }
-a{
-    text-decoration: none;
-}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    background-color: rgb(196, 231, 180);
-    color: #333;
-    font-family: 'AndyBold', sans-serif;
-    scroll-behavior: smooth;
-}
-
 header {
-    background-color: #6cff47;
-    color: #fff;
+    background-color: #4CAF50;
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,11 +24,15 @@ header {
     box-shadow: 0 3px 8px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 50;
+}
+
+header .logo {
+    font-size: 2rem;
 }
 
 header nav a {
-    color: #2b2b2b;
+    color: white;
     margin-left: 20px;
     text-decoration: none;
     font-size: 1.1em;
@@ -44,30 +40,64 @@ header nav a {
 }
 
 header nav a:hover {
-    color: #fff;
+    color: #ccefc6;
 }
-
 
 .hero {
-    background: url("https://source.unsplash.com/1600x600/?food,table") center/cover no-repeat;
-    color: white;
-    text-align: center;
-    padding: 130px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    height: 75vh;
+    overflow: hidden;
 }
 
-.hero-content {
-    background: rgba(0, 0, 0, 0.45);
-    padding: 50px;
-    border-radius: 15px;
-    max-width: 700px;
-    animation: fadeIn 1.5s ease-in-out;
+.hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(55%);
+    z-index: -1;
+}
+
+.hero__overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.hero__title {
+    font-size: 4rem;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+.hero__subtitle {
+    margin-top: 12px;
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+.hero__cta {
+    margin-top: 25px;
+    display: inline-block;
+    padding: 12px 35px;
+    background: #ffb703;
+    border-radius: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+
+.hero__cta:hover {
+    background: #ffd778;
 }
 
 button {
-    background-color: #63b620;
+    background-color: #4CAF50;
     color: white;
     border: none;
     padding: 12px 30px;
@@ -78,10 +108,9 @@ button {
 }
 
 button:hover {
-    background-color: #7db94c;
+    background-color: #66d069;
     transform: scale(1.05);
 }
-
 
 .receitas {
     padding: 70px 20px;
@@ -91,7 +120,7 @@ button:hover {
 
 .receitas h2 {
     font-size: 35px;
-    color: #66bd20;
+    color: #51a62b;
     margin-bottom: 40px;
     font-family: 'Momo_Signature';
 }
@@ -128,7 +157,7 @@ button:hover {
 .card h3 {
     margin: 15px;
     font-size: 1.3em;
-    color: #51b424;
+    color: #3a8c21;
 }
 
 .card p {
@@ -137,7 +166,7 @@ button:hover {
 }
 
 footer {
-    background-color: #68b43b;
+    background-color: #4CAF50;
     color: white;
     text-align: center;
     padding: 15px;
@@ -145,55 +174,18 @@ footer {
     font-size: 0.9em;
 }
 
-@keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         text-align: center;
-        padding: 20px;
+        gap: 10px;
     }
 
-    .cards {
-        flex-direction: column;
-        align-items: center;
- }
-.conteudo {
-    position: relative;
-    overflow: hidden; 
-}
+    .hero__title {
+        font-size: 2.8rem;
+    }
 
-.conteudo .video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;object-fit: cover; 
-    z-index: -1;
-    filter: brightness(60%);
-}
-
-.search-box {
-    display: flex;
-    gap: 6px;
-    margin-bottom: 15px;
-}
-
-.search-box input {
-    padding: 8px;
-    width: 200px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-}
-
-.search-box button {
-    padding: 8px 12px;
-    cursor: pointer;
-    border-radius: 4px;
-    border: none;
-    background-color: #eee;
-}
+    .hero__subtitle {
+        font-size: 1.2rem;
+    }
 }
