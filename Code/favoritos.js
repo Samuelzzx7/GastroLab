@@ -11,7 +11,13 @@ function favoritar(idReceita) {
         localStorage.setItem(chave, JSON.stringify(favoritas));
         alert("Adicionado aos favoritos!");
     } else {
-        alert("Essa receita já está nos favoritos.");
+        for (let i=0; i< favoritas.length; i++) {
+            if (favoritas[i] == idReceita) {
+                favoritas.splice(i, 1)
+                localStorage.setItem(chave, JSON.stringify(favoritas));
+            }
+        }
+        alert("Removido dos favoritos.");
     }
 }
 
