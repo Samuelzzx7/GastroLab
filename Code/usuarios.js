@@ -6,25 +6,39 @@ function carregarConteudo(pagina) {
         });
 }
 
+window.onload = function() {
+    carregarConteudo('perfil');
+};
+
 function salvarTarefas() {
+    let usuario = localStorage.getItem("logado");
+    if (!usuario) return;
+
     let lista = [];
     document.querySelectorAll("#listaTarefas li").forEach(li => {
         lista.push(li.childNodes[0].textContent.trim());
     });
 
-    localStorage.setItem("tarefas", JSON.stringify(lista));
+    localStorage.setItem("tarefas_" + usuario, JSON.stringify(lista));
 }
 
+
 function carregarTarefas() {
-    let tarefas = JSON.parse(localStorage.getItem("tarefas")) || [];
+    let usuario = localStorage.getItem("logado");
+    if (!usuario) return;
+
+    let tarefas = JSON.parse(localStorage.getItem("tarefas_" + usuario)) || [];
 
     let ul = document.getElementById("listaTarefas");
+    ul.innerHTML = "";
+
     tarefas.forEach(texto => {
         let li = document.createElement("li");
         li.innerHTML = `${texto} <span class="remove" onclick="remover(this)">✖</span>`;
         ul.appendChild(li);
     });
 }
+
 
 function addTarefa() {
     let input = document.getElementById("tarefaInput");

@@ -3,13 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GastroLab</title>
-    <link rel="shortcut icon" href="img/d5c9b2799bc40ee853b60b140d4c38e5.jpg">
+    <title>Document</title>
     <link rel="stylesheet" href="usuario.css"> 
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="uIngredientes.css">
+    <link rel="stylesheet" href="uLoginCadastro.css">
 </head>
 <body>
+    
+<div id="loginArea">
+    <h2>Login</h2>
+    <input id="usuarioLogin" type="text" placeholder="Usuário">
+    <input id="senhaLogin" type="password" placeholder="Senha">
+    <button id="btnLogin">Entrar</button>
+    <p><a href="#" id="linkCadastro">Criar conta</a></p>
+</div>
+
+<div id="cadastroArea" style="display:none;">
+    <h2>Criar Conta</h2>
+    <input id="usuarioCadastro" type="text" placeholder="Usuário">
+    <input id="senhaCadastro" type="password" placeholder="Senha">
+    <button id="btnCriarConta">Cadastrar</button>
+    <p><a href="#" id="linkLogin">Voltar ao login</a></p>
+</div>
+
+<div id="conteudoArea" style="display:none;">
     <header>
         <h1 class="logo">GastroLab</h1>
         <nav>
@@ -26,21 +44,23 @@
             <button id="btn-receitas">Perfil</button>
           </a>
         </nav>
-        <nav class="top-menu">
-            <a href="usuario.html" id="link-contato">Perfil</a>
+        <nav>
         </nav>  
     </header> 
     <nav class="sidebar">
-            <h2>Menu</h2>
     <ul>
         <li><a href="#" onclick="carregarConteudo('perfil')">Perfil</a></li>
         <li><a href="#" onclick="carregarConteudo('favoritas')">Favoritas</a></li>
         <li><a href="#" onclick="carregarConteudo('ingredientes')">Seus Ingredientes</a></li>
-        <li class="sair"><a href="#" onclick="carregarConteudo('sair')">Sair</a></li>
+        <li class="sair" id="btnLogout"><a>Sair</a></li>
     </ul>  
     </nav>
     <main class="conteudo">
     </main>
-    <script src="usuarios.js"> </script>    
+    <script src="usuarios.js"> </script> 
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="usuariosTeste.js"></script>
 </body>
 </html>

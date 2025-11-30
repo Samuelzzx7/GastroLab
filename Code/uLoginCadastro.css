@@ -1,0 +1,74 @@
+#loginArea,
+#cadastroArea {
+    width: 480px;
+    background: #ffffff;
+    padding: 40px;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: .3s;
+}
+
+#loginArea h2,
+#cadastroArea h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #333;
+}
+
+#loginArea input,
+#cadastroArea input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: .2s;
+}
+
+#loginArea input:focus,
+#cadastroArea input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    background: #fff;
+}
+
+#loginArea button,
+#cadastroArea button {
+    width: 100%;
+    padding: 12px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#loginArea button:hover,
+#cadastroArea button:hover {
+    background: #4CAF50;
+}
+
+#loginArea p,
+#cadastroArea p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+#loginArea a,
+#cadastroArea a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#loginArea a:hover,
+#cadastroArea a:hover {
+    text-decoration: underline;
+}
+
