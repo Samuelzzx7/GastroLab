@@ -15,7 +15,7 @@
         <h2>Seus Ingredientes</h2>
         <p>Gerencie os ingredientes que você tem em casa.
            Adicione, remova ou atualize sua lista para facilitar o planejamento das suas receitas.</p>
-    <div class="container">
+    <article class="container">
         <h2>Ingredientes</h2>
 
         <div class="input-area">
@@ -24,9 +24,12 @@
         </div>
 
         <ul id="listaTarefas">
-            <li>Banana <span class="remove" onclick="remover(this)">✖</span></li>
         </ul>
-    </div>
+    </article>
+    <article class="botoes">
+        <button onclick="carregarTarefas()">Carregar</button>
+        <button onclick="salvarTarefas()">Salvar</button>
+    </article>
     </script>
     </main>
 </body>
