@@ -6,6 +6,7 @@ function carregarConteudo(pagina) {
         });
 }
 
+
 window.onload = function() {
     carregarConteudo('perfil');
 };
