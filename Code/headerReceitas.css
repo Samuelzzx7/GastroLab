@@ -58,3 +58,8 @@ button:hover {
     background-color: #66d069;
     transform: scale(1.05);
 }
+
+#favoritar {
+    position: absolute;
+    right: 2%;
+}
