@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #9fd8a8a6;
+        background-color: #ecf8dd;
     color: #333;
 }
 
@@ -23,7 +23,7 @@ header h1 {
 .frase {
     font-size: 16px;
     margin-top: 8px;
-    color: #6aac44;
+    color:black;
 }
 
 .imagem {
@@ -63,4 +63,18 @@ footer {
     text-align: center;
     margin-top: 35px;
     color: #6d4a30;
+}
+
+header {
+     margin-top: 25px;
+    display: grid;
+    padding: 12px 35px;
+    background:#ccefc6;
+    border-radius: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+    
+
 }
