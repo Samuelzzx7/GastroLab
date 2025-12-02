@@ -60,6 +60,10 @@ li {
     align-items: center;
 }
 
+article li {
+    display: flex;
+}
+
 .remove {
     color: red;
     cursor: pointer;
@@ -74,4 +78,30 @@ li {
 
 .botoes button {
     margin-right: 2%;
+}
+
+.tenho {
+    border-left: 8px solid #4CAF50;
+    background: #e8f5e9;
+}
+
+.acabando {
+    border-left: 8px solid #FFC107;
+    background: #fff8e1;
+}
+
+.comprar {
+    border-left: 8px solid #F44336;
+    background: #ffebee;
+}
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.filtros button {
+    background-color: #3e8f42;
 }

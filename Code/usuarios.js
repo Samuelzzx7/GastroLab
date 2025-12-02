@@ -16,8 +16,12 @@ function salvarTarefas() {
     if (!usuario) return;
 
     let lista = [];
+
     document.querySelectorAll("#listaTarefas li").forEach(li => {
-        lista.push(li.childNodes[0].textContent.trim());
+        lista.push({
+            texto: li.querySelector(".texto").textContent.trim(),
+            categoria: li.dataset.categoria || ""
+        });
     });
 
     localStorage.setItem("tarefas_" + usuario, JSON.stringify(lista));
@@ -29,37 +33,64 @@ function carregarTarefas() {
     if (!usuario) return;
 
     let tarefas = JSON.parse(localStorage.getItem("tarefas_" + usuario)) || [];
-
     let ul = document.getElementById("listaTarefas");
+
     ul.innerHTML = "";
 
-    tarefas.forEach(texto => {
-        let li = document.createElement("li");
-        li.innerHTML = `${texto} <span class="remove" onclick="remover(this)">✖</span>`;
-        ul.appendChild(li);
+    tarefas.forEach(item => {
+        criarLi(item.texto, item.categoria);
     });
 }
 
 
 function addTarefa() {
     let input = document.getElementById("tarefaInput");
+    let select = document.getElementById("categoriaSelect");
+
     let texto = input.value.trim();
+    let categoria = select.value;
 
-    if (texto === "") return;
+    if (texto === "") return alert("Digite um ingrediente!");
+    if (categoria === "") return alert("Escolha uma categoria!");
 
-        let ul = document.getElementById("listaTarefas");
+    criarLi(texto, categoria);
 
-        let li = document.createElement("li");
-        li.innerHTML = `${texto} <span class="remove" onclick="remover(this)">✖</span>`;
+    input.value = "";
+    select.value = "";
+    input.focus();
+}
 
-        ul.appendChild(li);
 
-        input.value = "";  
-        input.focus();     
-    }
+function criarLi(texto, categoria) {
+    let ul = document.getElementById("listaTarefas");
+
+    let li = document.createElement("li");
+
+    li.dataset.categoria = categoria;
+    if (categoria) li.classList.add(categoria);
+
+    li.innerHTML = `
+        <span class="texto">${texto}</span>
+        <span class="remove" onclick="remover(this)">✖</span>
+    `;
+
+    ul.appendChild(li);
+}
+
 
 function remover(item) {
     item.parentElement.remove();
-
     salvarTarefas();
-}       
+}
+
+function filtrarCategoria(cat) {
+    let lis = document.querySelectorAll("#listaTarefas li");
+
+    lis.forEach(li => {
+        if (cat === "" || li.dataset.categoria === cat) {
+            li.style.display = "flex";
+        } else {
+            li.style.display = "none";
+        }
+    });
+}

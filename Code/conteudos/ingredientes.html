@@ -17,7 +17,19 @@
 
         <div class="input-area">
             <input id="tarefaInput" type="text" placeholder="Adicionar novo ingrediente...">
+                <select id="categoriaSelect" name="opcoes">
+                    <option value=""></option>
+                    <option value="tenho">Tenho</option>
+                    <option value="acabando">Acabando</option>
+                    <option value="comprar">Comprar</option>
+                </select>
             <button onclick="addTarefa()">Adicionar</button>
+        </div>
+        <div class="filtros">
+            <button onclick="filtrarCategoria('')">Todos</button>
+            <button onclick="filtrarCategoria('tenho')">Tenho</button>
+            <button onclick="filtrarCategoria('acabando')">Acabando</button>
+            <button onclick="filtrarCategoria('comprar')">Comprar</button>
         </div>
 
         <ul id="listaTarefas">
