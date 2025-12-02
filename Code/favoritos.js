@@ -1,5 +1,5 @@
 function favoritar(idReceita) {
-    let user = localStorage.getItem("usuarioLogado");
+    let user = localStorage.getItem("logado");
     if (!user) return alert("Você precisa estar logado!");
 
     let chave = "favoritas_" + user;

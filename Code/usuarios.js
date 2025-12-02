@@ -1,15 +1,25 @@
 function carregarConteudo(pagina) {
-    fetch("conteudos/" + pagina + ".html")
-        .then(r => r.text())
-        .then(html => {
-            document.querySelector(".conteudo").innerHTML = html;
-        });
+  return fetch("conteudos/" + pagina + ".html")
+    .then(r => r.text())
+    .then(html => {
+      document.querySelector(".conteudo").innerHTML = html;
+    });
+}
+
+window.onload = function() {
+  carregarConteudo('perfil').then(() => {
+    nomeUsuario();
+  });
+};
+
+function nomeUsuario() {
+    const nomeUsuario = localStorage.getItem('usuarioLogado');
+    const h2El = document.getElementById('nomeUsuario');
+
+    h2El.textContent = "Bem-vindo, " + nomeUsuario + "!";
 }
 
 
-window.onload = function() {
-    carregarConteudo('perfil');
-};
 
 function salvarTarefas() {
     let usuario = localStorage.getItem("logado");

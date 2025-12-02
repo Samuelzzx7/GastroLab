@@ -41,7 +41,7 @@
     </header> 
     <nav class="sidebar">
     <ul>
-        <li><a href="#" onclick="carregarConteudo('perfil')">Perfil</a></li>
+        <li><a href="#" onclick="carregarConteudo('perfil').then(() => {nomeUsuario();});">Perfil</a></li>
         <li><a href="#" onclick="carregarConteudo('favoritas')">Favoritas</a></li>
         <li><a href="#" onclick="carregarConteudo('ingredientes')">Seus Ingredientes</a></li>
         <li class="sair" id="btnLogout"><a>Sair</a></li>
@@ -49,11 +49,11 @@
     </nav>
     <main class="conteudo">
     </main>
-    <script src="usuarios.js"> </script> 
 </div>
-
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
 <script src="usuariosTeste.js"></script>
+<script src="usuarios.js"> </script> 
 <script src="favoritos.js"></script>
 </body>
 </html>

@@ -7,8 +7,16 @@
 </head>
 <body>
     <main class="conteudo">
-        <h2>Seu nome</h2>
-        <p>Detalhes do perfil do usuário serão exibidos aqui. Você pode atualizar suas informações pessoais, preferências e outras configurações relacionadas à sua conta.</p>
+        <h2 id="nomeUsuario"></h2>
+            <script>    
+        function nomeUsuario() {
+            const nomeUsuario = localStorage.getItem('usuarioLogado');
+            const h2El = document.getElementById('nomeUsuario');
+
+                h2El.textContent = "Bem-vindo, " + nomeUsuario + "!";
+        };
+    </script>
+        <p>Detalhes do perfil do usuário serão exibidos aqui. Você pode atualizar o estado de seus ingredientes e outras configurações relacionadas à sua conta, como suas receitas favoritas</p>
     </main>
 </body>
 </html>
