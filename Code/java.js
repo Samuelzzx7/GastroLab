@@ -11,3 +11,14 @@ function buscarReceita() {
         }
     });
 } 
+const modal = document.getElementById("meuModal");
+const botao = document.getElementById("abrirModal");
+const fechar = document.querySelector(".fechar");
+
+botao.onclick = () => modal.style.display = "block";
+
+fechar.onclick = () => modal.style.display = "none";
+
+window.onclick = e => {
+  if (e.target === modal) modal.style.display = "none";
+};
