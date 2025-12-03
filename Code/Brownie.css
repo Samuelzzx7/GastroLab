@@ -65,3 +65,52 @@ footer {
     margin-top: 35px;
     color: #6d4a30;
 }
+
+@media (max-width: 600px) {
+    
+    body {
+        padding: 10px;
+    }
+
+    header {
+        margin-bottom: 20px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    .frase {
+        font-size: 14px;
+    }
+
+    .imagem {
+        margin-bottom: 15px;
+    }
+    
+    .imagem img {
+        width: 95%;
+    }
+
+    .conteudo {
+        padding: 15px;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 0; /* Remove a borda arredondada para ocupar 100% da largura da tela */
+    }
+
+    .conteudo h2 {
+        font-size: 18px;
+    }
+
+    .conteudo ul, 
+    .conteudo ol {
+        margin-left: 15px;
+    }
+
+    footer {
+        margin-top: 20px;
+        font-size: 12px;
+    }
+}
